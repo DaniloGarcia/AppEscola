@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Criar conta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="conta" (ngSubmit)="fncCriarConta()">  
+    <div class="spacer" style="width: 300px; height: 41px;"></div>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Nome</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <div class="spacer" style="width: 300px; height: 41px;"></div>
+      <ion-item>
+        <ion-label color="primary" floating>Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Confirma senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button full round color="secondary">Criar</button>
+  </form>
+  <button ion-button full round icon-left><ion-icon name="logo-facebook"></ion-icon> Facebook</button>
+
+</ion-content>
+
+

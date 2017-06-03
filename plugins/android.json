@@ -1,0 +1,35 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1929187564005103",
+            "APP_NAME": "AppEscola",
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.appEscola"
+        }
+    },
+    "dependent_plugins": {}
+}

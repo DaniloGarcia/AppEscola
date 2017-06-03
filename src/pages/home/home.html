@@ -1,14 +1,96 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      AppEscola
     </ion-title>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-searchbar 
+    placeholder="Filtrar" 
+    showCancelButton="true">
+  </ion-searchbar>
+  <ion-list>
+    <ion-card>
+      <img  height="80" src="../assets/img/nin-live.png">
+      <ion-card-content>  
+        <ion-card-title>
+          Escola primária
+        </ion-card-title>
+              <ion-list>
+        <button ion-item>
+          <ion-icon name="call" item-left></ion-icon>
+          <p>(44) 3645 5641</p>
+        </button>
+        <button ion-item text-wrap>
+          <ion-icon name="pin" item-left></ion-icon>
+          <p>R Monte Branco, 124 - Maringá - PR</p>
+        </button>
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img  height="80" src="../assets/img/nin-live.png">
+      <ion-card-content>  
+        <ion-card-title>
+          Escola primária
+        </ion-card-title>
+              <ion-list>
+        <button ion-item>
+          <ion-icon name="call" item-left></ion-icon>
+          <p>(44) 3645 5641</p>
+        </button>
+        <button ion-item text-wrap>
+          <ion-icon name="pin" item-left></ion-icon>
+          <p>R Monte Branco, 124 - Maringá - PR</p>
+        </button>
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img  height="80" src="../assets/img/nin-live.png">
+      <ion-card-content>  
+        <ion-card-title>
+          Escola primária
+        </ion-card-title>
+              <ion-list>
+        <button ion-item>
+          <ion-icon name="call" item-left></ion-icon>
+          <p>(44) 3645 5641</p>
+        </button>
+        <button ion-item text-wrap>
+          <ion-icon name="pin" item-left></ion-icon>
+          <p>R Monte Branco, 124 - Maringá - PR</p>
+        </button>
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <!--
+  <ion-list>
+    <div *ngFor="let group of groups">
+      <ion-item class="item-stable"
+                (click)="toggleGroup(group)"
+                [ngClass]="{active: isGroupShown(group)}">
+          <i><ion-icon name="add" *ngIf="!isGroupShown(group)"></ion-icon></i>
+          <i><ion-icon name="remove" *ngIf="isGroupShown(group)"></ion-icon></i>
+        &nbsp;
+        Group {{group.name}}
+      </ion-item>
+      <div *ngIf="isGroupShown(group)">
+        <ion-item 
+          class="item-accordion"
+          *ngFor="let item of group.items">
+          
+          {{item}}
+        </ion-item>
+      </div>
+    </div>
+  </ion-list>
+  -->
+  
 </ion-content>

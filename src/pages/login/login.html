@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding="true" class="has-header">
+  <form [formGroup]="login" (ngSubmit)="logar()">
+    <div id="inCio-markdown2" class="show-list-numbers-and-dots">
+      <p>Quem é você?</p>
+
+      <p>Selecione uma das opções abaixo:</p>
+    </div>
+
+    <ion-list radio-group name="tipo" >
+      <ion-item>
+        <ion-label>Papai ou Mamãe</ion-label>
+        <ion-radio value="pais" checked (ionSelect)="fncTipoLogin('pais')"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Local</ion-label>
+        <ion-radio value="local" (ionSelect)="fncTipoLogin('local')"></ion-radio>
+      </ion-item>
+    </ion-list>
+    
+    <div class="spacer" style="width: 300px; height: 41px;"></div>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Login</ion-label>
+        <ion-input type="email" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <div style="text-align: center">
+        <ion-label full (click)="fncEsqueciSenha()" style="text-decoration: underline">Esqueci minha senha</ion-label>
+      </div>
+      
+    </ion-list>
+    <button ion-button full round color="secondary">Entrar</button>
+  </form>
+  <button ion-button full round icon-left><ion-icon name="logo-facebook"></ion-icon> Facebook</button>
+  <button ion-button full clear [disabled]="btnCriarConta" [navPush]="criarContaPage">Ou criar uma conta</button>
+</ion-content>
+
