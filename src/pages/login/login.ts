@@ -15,15 +15,13 @@ import { EsqueciSenhaPage } from '../esqueci-senha/esqueci-senha';
 export class LoginPage {
 
   login: any = {};
-  tipoLogin : any = 'pais';
   email : any;
-  btnCriarConta : any = false;
-  
+  boTpHidden : any = 0;
   criarContaPage: any =  CriarContaPage;
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
+    public navCtrl: NavController,
+    public navParams: NavParams,
     public formBuilder: FormBuilder) {
 
     this.login = this.formBuilder.group({
@@ -31,7 +29,7 @@ export class LoginPage {
       email:['', Validators.required],
       senha:['', Validators.required]
     });
-   
+
 
   }
 
@@ -44,7 +42,7 @@ export class LoginPage {
   }
 
   fncTipoLogin(tipo){
-    this.btnCriarConta = tipo == 'pais' ? false : true;
+    this.boTpHidden = tipo;
   }
 
   fncEsqueciSenha(){
