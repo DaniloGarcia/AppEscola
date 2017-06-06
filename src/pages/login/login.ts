@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
-import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
 import { CriarContaPage } from '../criar-conta/criar-conta';
 import { EsqueciSenhaPage } from '../esqueci-senha/esqueci-senha';
@@ -22,7 +21,10 @@ export class LoginPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public formBuilder: FormBuilder) {
+    public formBuilder: FormBuilder,
+    public menuCtrl: MenuController) {
+
+    this.menuCtrl.enable(false);
 
     this.login = this.formBuilder.group({
       tipo:['', Validators.required],
@@ -48,5 +50,6 @@ export class LoginPage {
   fncEsqueciSenha(){
     this.navCtrl.push(EsqueciSenhaPage);
   }
+ 
 
 }
