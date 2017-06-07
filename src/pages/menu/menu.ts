@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { Home2Page } from '../home2/home2';
 import { LoginPage } from '../login/login';
 
 
@@ -11,9 +11,9 @@ import { LoginPage } from '../login/login';
 })
 export class MenuPage {
 
-  rootPage: any = HomePage;
+  rootPage: any = Home2Page;
 
-  home: any = HomePage;
+  home: any = Home2Page;
   login: any = LoginPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

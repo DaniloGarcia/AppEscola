@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Home2Page } from '../pages/home2/home2';
 
 import { LoginPage } from '../pages/login/login';
 import { MenuPage } from '../pages/menu/menu';
@@ -19,7 +20,8 @@ import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
     LoginPage,
     MenuPage,
     CriarContaPage,
-    EsqueciSenhaPage
+    EsqueciSenhaPage,
+    Home2Page
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
     LoginPage,
     MenuPage,
     CriarContaPage,
-    EsqueciSenhaPage
+    EsqueciSenhaPage,
+    Home2Page
   ],
   providers: [
     StatusBar,
