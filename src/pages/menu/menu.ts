@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { TabHomePage } from '../tab-home/tab-home';
+import { Home2Page } from '../home2/home2';
 
 
 @IonicPage()
@@ -11,9 +11,9 @@ import { TabHomePage } from '../tab-home/tab-home';
 })
 export class MenuPage {
 
-  rootPage: any = TabHomePage;
+  rootPage: any = Home2Page;
 
-  home: any = TabHomePage;
+  home: any = Home2Page;
   login: any = LoginPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

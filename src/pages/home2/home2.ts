@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AdicionarLocalPage } from '../adicionar-local/adicionar-local';
 
-/**
- * Generated class for the Home2Page page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-home2',
@@ -19,6 +15,10 @@ export class Home2Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Home2Page');
+  }
+
+  adicionarEscola(){
+    this.navCtrl.push(AdicionarLocalPage);
   }
 
 }

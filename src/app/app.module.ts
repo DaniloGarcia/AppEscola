@@ -7,12 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Home2Page } from '../pages/home2/home2';
-import { TabHomePage } from '../pages/tab-home/tab-home';
 
 import { LoginPage } from '../pages/login/login';
 import { MenuPage } from '../pages/menu/menu';
 import { CriarContaPage } from '../pages/criar-conta/criar-conta';
 import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
+import { AdicionarLocalPage } from '../pages/adicionar-local/adicionar-local';
+import { ConectarLocalPage } from '../pages/conectar-local/conectar-local';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
     CriarContaPage,
     EsqueciSenhaPage,
     Home2Page,
-    TabHomePage
+    AdicionarLocalPage,
+    ConectarLocalPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
     CriarContaPage,
     EsqueciSenhaPage,
     Home2Page,
-    TabHomePage
+    AdicionarLocalPage,
+    ConectarLocalPage
   ],
   providers: [
     StatusBar,

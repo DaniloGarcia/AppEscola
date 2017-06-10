@@ -1,0 +1,27 @@
+
+<ion-header class="headericon">
+  <ion-navbar>
+    <ion-title>Conectar Local</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/img/nin-live.png">
+  <ion-item text-wrap class="text-center">
+    <h1>Escola de Rock</h1>
+  </ion-item>
+  <div padding>
+    <ion-list>
+      <ion-item no-lines>
+        <ion-label color="primary" stacked>CPF</ion-label>
+        <ion-input type="number" placeholder="Digite o seu CPF" ></ion-input>
+      </ion-item>
+      <button ion-button block color="secondary" (click)="fncEsqueciSenha()">Solicitar Token</button>
+      <ion-item no-lines>
+        <ion-label color="primary" stacked>Token</ion-label>
+        <ion-input type="text" placeholder="Digite seu token"></ion-input>
+      </ion-item>
+      <button ion-button block color="secondary" (click)="fncEsqueciSenha()">Incluir</button>
+    </ion-list>
+  </div>
+</ion-content>

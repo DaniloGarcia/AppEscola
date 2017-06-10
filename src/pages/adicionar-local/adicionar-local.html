@@ -16,8 +16,8 @@
     <div style="position: relative">
       <img src="assets/img/nin-live.png">
       <ion-fab right top>
-        <button ion-fab class="fab-map">
-          <ion-icon name='arrow-dropright'></ion-icon>
+        <button ion-fab color="danger" (click)="conectarLocal()">
+          <ion-icon name='ios-log-in-outline'></ion-icon>
         </button>
       </ion-fab>
     </div>
@@ -35,8 +35,8 @@
     <div style="position: relative">
       <img src="assets/img/advance-card-map-madison.png">
       <ion-fab right top>
-        <button ion-fab class="fab-map">
-          <ion-icon name='arrow-dropright'></ion-icon>
+        <button ion-fab color="danger"  (click)="conectarLocal()">
+          <ion-icon name='ios-log-in-outline'></ion-icon>
         </button>
       </ion-fab>
     </div>
@@ -50,8 +50,17 @@
       <h2>(44) 3654 5642</h2>
     </ion-item>
   </ion-card>
+  
 </ion-content>
 
-<ion-fab right bottom>
-    <button ion-fab color="danger" (click)="adicionarEscola()"><ion-icon name="add" ></ion-icon></button>
-</ion-fab>
+<ion-footer padding>
+  <form>  
+    <ion-label color="primary">Informe o código de autorização:</ion-label>
+    <ion-item staked>
+      <ion-input type="email" placeholder="Digite o código" ></ion-input>
+    </ion-item>
+    <button ion-button block color="primary">Incluir</button>
+  </form>
+</ion-footer>
+
+
