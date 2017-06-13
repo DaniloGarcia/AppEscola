@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AcaoAutorizadoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ações realizadas</ion-title>
+  </ion-navbar>
+  <ion-item>
+    <ion-label stacked>Nome</ion-label>
+    <ion-input value="Marcos da Silva" [readonly]=true ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Parentesco</ion-label>
+    <ion-input value="Tio" [readonly]=true ></ion-input>
+  </ion-item>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let acaoAuto of listaAcoesAutorizado">
+      <ion-card-header>
+        <ion-icon name="calendar"></ion-icon>
+        {{acaoAuto.data}}
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <ion-icon name="contact"></ion-icon>
+              {{acaoAuto.nome}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>Turma: {{acaoAuto.turma}}</ion-col>
+            <ion-col col-6>Período: {{acaoAuto.periodo}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

@@ -16,6 +16,7 @@ import { AdicionarLocalPage } from '../pages/adicionar-local/adicionar-local';
 import { ConectarLocalPage } from '../pages/conectar-local/conectar-local';
 import { OpcoesLocalPage } from '../pages/opcoes-local/opcoes-local';
 import { AutorizadoPage } from '../pages/autorizado/autorizado';
+import { AcaoAutorizadoPage } from '../pages/acao-autorizado/acao-autorizado';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AutorizadoPage } from '../pages/autorizado/autorizado';
     AdicionarLocalPage,
     ConectarLocalPage,
     OpcoesLocalPage,
-    AutorizadoPage
+    AutorizadoPage,
+    AcaoAutorizadoPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { AutorizadoPage } from '../pages/autorizado/autorizado';
     AdicionarLocalPage,
     ConectarLocalPage,
     OpcoesLocalPage,
-    AutorizadoPage
+    AutorizadoPage,
+    AcaoAutorizadoPage
   ],
   providers: [
     StatusBar,
