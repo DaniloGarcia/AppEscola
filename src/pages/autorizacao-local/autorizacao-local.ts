@@ -29,4 +29,7 @@ export class AutorizacaoLocalPage {
     this.navCtrl.push(AutorizadoPage);
   }
 
+  acoesRealizadas(autorizado){
+  }
+
 }
