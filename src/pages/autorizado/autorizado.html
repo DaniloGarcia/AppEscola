@@ -5,23 +5,76 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-title>Cadastro de autorizado</ion-title>
+<ion-content>
   <form>
     <ion-grid>
       <ion-row>
         <ion-col col-3>
-          <ion-thumbnail item-start>
-            <img src="assets/img/marty-avatar.png">
-          </ion-thumbnail>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="assets/img/marty-avatar.png">
+            </ion-thumbnail>
+          </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col col-12>
-
+          <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-select placeholder="Selecione o parentesco">
+              <ion-option value="0">Tio(a)</ion-option>
+              <ion-option value="1">Primo(a)</ion-option>
+              <ion-option value="2">Irmã(ão)</ion-option>
+              <ion-option value="3">Sobrinho(a)</ion-option>
+              <ion-option value="4">Padastro</ion-option>
+              <ion-option value="5">Madastra</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label stacked>Nome</ion-label>
+            <ion-input type="text" placeholder="Digite o nome" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>
+          <ion-item>
+            <ion-label stacked>Tipo documento</ion-label>
+            <ion-select placeholder="Tipo">
+              <ion-option value="0">CPF</ion-option>
+              <ion-option value="1">RG</ion-option>
+              <ion-option value="2">Habilitação</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-7>
+          <ion-item>
+            <ion-label stacked>Nº Documento</ion-label>
+            <ion-input type="number" placeholder="Número documento" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>
+          <ion-item no-lines>
+            <ion-checkbox></ion-checkbox>
+            <ion-label stacked>Temporária</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-7>
+          <ion-item>
+            <ion-label stacked>Validade</ion-label>
+            <ion-input type="date" placeholder="Validade" ></ion-input>
+          </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
-    <button ion-button block (click)="salvarAutorizado()">Salvar</button>
+    <ion-item>
+      <button ion-button block padding (click)="salvarAutorizado()">Salvar</button>
+    </ion-item>
   </form>
 </ion-content>
