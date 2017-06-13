@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AdicionarLocalPage } from '../adicionar-local/adicionar-local';
+import { OpcoesLocalPage } from '../opcoes-local/opcoes-local';
 
 
 @IonicPage()
@@ -19,6 +20,10 @@ export class Home2Page {
 
   adicionarEscola(){
     this.navCtrl.push(AdicionarLocalPage);
+  }
+
+  entrarLocal() {
+    this.navCtrl.push(OpcoesLocalPage);
   }
 
 }

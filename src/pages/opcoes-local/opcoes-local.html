@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Escola de Rock</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--<img src="assets/img/nin-live.png"> -->
+  <ion-list inset>
+      <ion-list-header class="listHeader">Opções do local</ion-list-header>
+      <button ion-item *ngFor="let opcaoLocal of opcoesLocal" (click)="opcaoSelecionada(opcaoLocal.tela)">{{ opcaoLocal.nome }}</button> 
+  </ion-list>
+</ion-content>

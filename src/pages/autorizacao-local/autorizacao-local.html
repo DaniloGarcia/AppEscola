@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Autorizações</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let autorizado of listaAutorizacoes">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{autorizado.urlFoto}}">
+        </ion-avatar>
+        <h2>{{autorizado.nome}}</h2>
+        <p>Parentesco: {{autorizado.parentesco}}</p>
+        <p>CPF: {{autorizado.cpf}}</p>
+        <p> Tipo: <span class={{autorizado.corTipo}}> {{autorizado.tipo}}</span></p>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button icon-left clear item-end>
+          <ion-icon name="create"></ion-icon>
+          Editar
+        </button>
+        <button ion-button icon-left clear item-end color="danger">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item>
+    </ion-card>
+</ion-content>
+
+<ion-fab right bottom padding>
+    <button ion-fab color="danger" (click)="adicionarAutorizacao()"><ion-icon name="add" ></ion-icon></button>
+</ion-fab>

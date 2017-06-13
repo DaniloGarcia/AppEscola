@@ -16,7 +16,7 @@
     <div style="position: relative">
       <img src="assets/img/nin-live.png">
       <ion-fab right top>
-        <button ion-fab class="fab-map">
+        <button ion-fab class="fab-map" (click)="entrarLocal()">
           <ion-icon name='arrow-dropright'></ion-icon>
         </button>
       </ion-fab>
@@ -35,7 +35,7 @@
     <div style="position: relative">
       <img src="assets/img/advance-card-map-madison.png">
       <ion-fab right top>
-        <button ion-fab class="fab-map">
+        <button ion-fab class="fab-map" (click)="entrarLocal()">
           <ion-icon name='arrow-dropright'></ion-icon>
         </button>
       </ion-fab>
@@ -52,6 +52,6 @@
   </ion-card>
 </ion-content>
 
-<ion-fab right bottom>
+<ion-fab right bottom padding>
     <button ion-fab color="danger" (click)="adicionarEscola()"><ion-icon name="add" ></ion-icon></button>
 </ion-fab>
