@@ -15,6 +15,7 @@ import { EsqueciSenhaPage } from '../pages/esqueci-senha/esqueci-senha';
 import { AdicionarLocalPage } from '../pages/adicionar-local/adicionar-local';
 import { ConectarLocalPage } from '../pages/conectar-local/conectar-local';
 import { OpcoesLocalPage } from '../pages/opcoes-local/opcoes-local';
+import { AutorizadoPage } from '../pages/autorizado/autorizado';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { OpcoesLocalPage } from '../pages/opcoes-local/opcoes-local';
     Home2Page,
     AdicionarLocalPage,
     ConectarLocalPage,
-    OpcoesLocalPage
+    OpcoesLocalPage,
+    AutorizadoPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { OpcoesLocalPage } from '../pages/opcoes-local/opcoes-local';
     Home2Page,
     AdicionarLocalPage,
     ConectarLocalPage,
-    OpcoesLocalPage
+    OpcoesLocalPage,
+    AutorizadoPage
   ],
   providers: [
     StatusBar,

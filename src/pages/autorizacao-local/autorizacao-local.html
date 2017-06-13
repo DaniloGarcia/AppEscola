@@ -7,9 +7,9 @@
 <ion-content>
     <ion-card *ngFor="let autorizado of listaAutorizacoes">
       <ion-item>
-        <ion-avatar item-start>
+        <ion-thumbnail item-start>
           <img src="{{autorizado.urlFoto}}">
-        </ion-avatar>
+        </ion-thumbnail>
         <h2>{{autorizado.nome}}</h2>
         <p>Parentesco: {{autorizado.parentesco}}</p>
         <p>CPF: {{autorizado.cpf}}</p>
@@ -17,11 +17,11 @@
       </ion-item>
 
       <ion-item>
-        <button ion-button icon-left clear item-end>
+        <button ion-button icon-left clear item-end (click)="alterarAutorizado(autorizado)">
           <ion-icon name="create"></ion-icon>
           Editar
         </button>
-        <button ion-button icon-left clear item-end color="danger">
+        <button ion-button icon-left clear item-end color="danger" (click)="excluirAutorizado(autorizado)">
           <ion-icon name="trash"></ion-icon>
           Excluir
         </button>

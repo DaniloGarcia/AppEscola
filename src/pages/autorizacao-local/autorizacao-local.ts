@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AutorizadoPage } from '../autorizado/autorizado';
 
-/**
- * Generated class for the AutorizacaoLocalPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-autorizacao-local',
@@ -28,6 +23,10 @@ export class AutorizacaoLocalPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AutorizacaoLocalPage');
+  }
+
+  alterarAutorizado(autorizado){
+    this.navCtrl.push(AutorizadoPage);
   }
 
 }
