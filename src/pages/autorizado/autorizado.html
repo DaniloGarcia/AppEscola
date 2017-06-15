@@ -7,15 +7,21 @@
 
 <ion-content>
   <form>
+    <ion-item no-lines>
+        <img [src]="base64Image" *ngIf="base64Image">
+    </ion-item>
     <ion-grid>
       <ion-row>
-        <ion-col col-5>
+        <ion-col col-06>
           <ion-item no-lines>
-            <ion-thumbnail item-start>
-              <img src="assets/img/marty-avatar.png">
-            </ion-thumbnail>
+              <button ion-button block (click)="buscaFotoGaleria()">Galeria</button>
           </ion-item>
-        </ion-col>        
+        </ion-col> 
+        <ion-col col-06>
+          <ion-item no-lines>
+              <button ion-button block (click)="tiraFotoCamera()">Nova foto</button>
+          </ion-item>
+        </ion-col>     
       </ion-row>
       <ion-row>
         <ion-col col-12>
