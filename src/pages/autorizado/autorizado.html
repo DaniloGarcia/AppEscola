@@ -6,81 +6,76 @@
 
 
 <ion-content>
-  <form>
-    <ion-item no-lines>
-        <img [src]="base64Image" *ngIf="base64Image">
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col col-06>
-          <ion-item no-lines>
-              <button ion-button block (click)="buscaFotoGaleria()">Galeria</button>
-          </ion-item>
-        </ion-col> 
-        <ion-col col-06>
-          <ion-item no-lines>
-              <button ion-button block (click)="tiraFotoCamera()">Nova foto</button>
-          </ion-item>
-        </ion-col>     
-      </ion-row>
-      <ion-row>
-        <ion-col col-12>
-          <ion-item>
-            <ion-label stacked>Parentesco</ion-label>
-            <ion-select placeholder="Selecione o parentesco">
-              <ion-option value="0">Tio(a)</ion-option>
-              <ion-option value="1">Primo(a)</ion-option>
-              <ion-option value="2">Irmã(ão)</ion-option>
-              <ion-option value="3">Sobrinho(a)</ion-option>
-              <ion-option value="4">Padastro</ion-option>
-              <ion-option value="5">Madastra</ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-12>
-          <ion-item>
-            <ion-label stacked>Nome</ion-label>
-            <ion-input type="text" placeholder="Digite o nome" ></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-5>
-          <ion-item>
-            <ion-label stacked>Tipo documento</ion-label>
-            <ion-select placeholder="Tipo">
-              <ion-option value="0">CPF</ion-option>
-              <ion-option value="1">RG</ion-option>
-              <ion-option value="2">Habilitação</ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-        <ion-col col-7>
-          <ion-item>
-            <ion-label stacked>Nº Documento</ion-label>
-            <ion-input type="number" placeholder="Número documento" ></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-5>
-          <ion-item no-lines>
-            <ion-checkbox></ion-checkbox>
-            <ion-label stacked>Temporária</ion-label>
-          </ion-item>
-        </ion-col>
-        <ion-col col-7>
-          <ion-item>
-            <ion-label stacked>Validade</ion-label>
-            <ion-input type="date" placeholder="Validade" ></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-item>
-      <button ion-button block padding (click)="salvarAutorizado()">Salvar</button>
-    </ion-item>
-  </form>
+  <ion-item no-lines>
+      <img [src]="base64Image" src="{{autorizado.urlFoto}}" >
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-06>
+        <ion-item no-lines>
+            <button ion-button block (click)="buscaFotoGaleria()">Galeria</button>
+        </ion-item>
+      </ion-col> 
+      <ion-col col-06>
+        <ion-item no-lines>
+            <button ion-button block (click)="tiraFotoCamera()">Nova foto</button>
+        </ion-item>
+      </ion-col>     
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label stacked>Parentesco</ion-label>
+          <ion-select placeholder="Selecione o parentesco" [(ngModel)] = "autorizado.parentesco">
+            <ion-option *ngFor="let parentesco of parentescos" value={{parentesco.codigo}} >{{parentesco.nome}}</ion-option >
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" placeholder="Digite o nome" [(ngModel)] = "autorizado.nome"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label stacked>Tipo documento</ion-label>
+          <ion-select placeholder="Tipo" [(ngModel)] = "autorizado.tipoDoc">
+            <ion-option *ngFor="let tipoDoc of tipoDocs " value="{{tipoDoc.codigo}}">{{tipoDoc.nome}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label stacked>Nº Documento</ion-label>
+          <ion-input type="number" placeholder="Número documento" [(ngModel)] = "autorizado.documento"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-checkbox [(ngModel)] = "autorizado.temporaria" ></ion-checkbox>
+          <ion-label stacked>Temporária</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label stacked>Validade</ion-label>
+          <ion-input type="date" placeholder="Validade" [(ngModel)] = "autorizado.validade"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <button ion-button block padding (click)="salvarAutorizado()">Salvar</button>
+  </ion-item>
 </ion-content>

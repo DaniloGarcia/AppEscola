@@ -11,9 +11,9 @@
           <img src="{{autorizado.urlFoto}}">
         </ion-thumbnail>
         <h2>{{autorizado.nome}}</h2>
-        <p>Parentesco: {{autorizado.parentesco}}</p>
-        <p>CPF: {{autorizado.cpf}}</p>
-        <p> Tipo: <span class={{autorizado.corTipo}}> {{autorizado.tipo}}</span></p>
+        <p>Parentesco: {{autorizado.parentescoDsc}}</p>
+        <p>Doc: {{autorizado.documento}}</p>
+        <p> Tipo: <span class={{autorizado.corTipo}}> {{autorizado.temporaria ? "Temporaria" :"Definitiva"}}</span></p>
       </ion-item>
 
       <ion-item>
@@ -34,5 +34,5 @@
 </ion-content>
 
 <ion-fab right bottom padding>
-    <button ion-fab color="danger" (click)="adicionarAutorizacao()"><ion-icon name="add" ></ion-icon></button>
+    <button ion-fab color="danger" (click)="adicionarAutorizado()"><ion-icon name="add" ></ion-icon></button>
 </ion-fab>

@@ -16,11 +16,39 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 export class AutorizadoPage {
 
   public base64Image: string;
+  public autorizado: any = {};
+
+  public parentescos: any = {};
+  public tipoDocs: any = {};
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public camera: Camera) {
+    
+    // Verifica se veio um autorizado para alteracao
+    if ( this.navParams.get('params') ){
+      this.autorizado = this.navParams.get('params');
+    }
+
+    //lista os parentescos
+    this.parentescos = [
+      {nome: "Tio(a)",      codigo: "1" },
+      {nome: "Primo(a)",    codigo: "2" },
+      {nome: "Irmão(ã)",    codigo: "3" },
+      {nome: "Sobrinho(a)", codigo: "4" },
+      {nome: "Padastro",    codigo: "5" },
+      {nome: "Madastra",    codigo: "6" }
+    ]
+
+    //lista de documentos
+    this.tipoDocs = [
+      {nome: "CPF",         codigo: "1" },
+      {nome: "RG",          codigo: "2" },
+      {nome: "Habilitação", codigo: "3" },
+    ]
+
+
   }
 
   ionViewDidLoad() {
