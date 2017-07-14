@@ -32,7 +32,7 @@ import { AcaoAutorizadoPage } from '../pages/acao-autorizado/acao-autorizado';
     ConectarLocalPage,
     OpcoesLocalPage,
     AutorizadoPage,
-    AcaoAutorizadoPage
+    AcaoAutorizadoPage,
   ],
   imports: [
     BrowserModule,

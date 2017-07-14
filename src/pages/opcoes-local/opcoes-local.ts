@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AutorizacaoLocalPage } from '../autorizacao-local/autorizacao-local';
+import { ChamadaPage } from '../chamada/chamada';
+
 
 /**
  * Generated class for the OpcoesLocalPage page.
@@ -20,7 +22,7 @@ export class OpcoesLocalPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.opcoesLocal = [
       {nome: "Controle de autorizações", tela: "AutorizacaoLocalPage"},
-      {nome: "Chamada", tela: "ChamadaLocalPage"}
+      {nome: "Chamada", tela: "ChamadaPage"}
     ]
   }
 

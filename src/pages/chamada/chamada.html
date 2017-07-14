@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chamada</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let chamada of listaChamada">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="{{chamada.urlFoto}}">
+        </ion-thumbnail>
+        <h2>{{chamada.nome}}</h2>
+        <p>{{chamada.serie}}</p>
+        <p>{{chamada.codigo}}</p>
+        <p>{{chamada.status}}</p>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button icon-left clear item-end (click)="realizarChamada(chamada)">
+          <ion-icon name="checkmark-circle"></ion-icon>
+          Chamar
+        </button>
+        <button ion-button icon-left clear item-end color="danger" (click)="cancelarChamada(chamada)">
+          <ion-icon name="close-circle"></ion-icon>
+          Cancelar
+        </button>
+      </ion-item>
+    </ion-card>
+</ion-content>
+
